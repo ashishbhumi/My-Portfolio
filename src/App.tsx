@@ -1,26 +1,17 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/NavBar";
 import Home from "./components/Home";
-import Projects from "./components/Projects";
-import About from "./components/About";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <div>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <div className="min-h-screen bg-slate-950 text-slate-100">
+      <Navbar />
+      <main className="pt-32">
+        <Home />
+      </main>
+      <Footer />
+    </div>
   );
 };
 
